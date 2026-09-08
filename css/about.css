@@ -1,0 +1,1110 @@
+/* ===============
+    haeder
+=================*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 25px 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===============
+    navbar
+=================*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===============
+    logo and TexoR
+=================*/
+.logo__and__TexoR {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo__and__TexoR img {
+  width: 130px;
+  height: 130px;
+}
+
+/* ===============
+    navigation menu
+=================*/
+.nav__menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav__menu .nav__link {
+  position: relative;
+  color: #858591;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* ===============
+    hover for navigation menu
+=================*/
+
+.nav__menu .nav__link:hover,
+.nav__menu .nav__link.active {
+  color: #ffffff;
+}
+
+/* ===============
+    navigation underline
+=================*/
+.nav__menu .nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background: #9b5cff;
+  transition: width 0.3s ease;
+}
+
+.nav__menu .nav__link:hover::after,
+.nav__menu .nav__link.active::after {
+  width: 100%;
+}
+
+/* ===============
+    Let's Talk button
+=================*/
+
+.navbar .nav__button {
+  padding: 10px 18px;
+  border: 1px solid #24242c;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: all ease 0.3s;
+}
+
+.navbar .nav__button:hover {
+  border-color: #9b5cff;
+  transform: translateY(-3px);
+}
+
+/* ===============
+    about page
+=================*/
+
+/* ===============
+    about hero
+=================*/
+.about__hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  padding: 160px 0 100px;
+  overflow: hidden;
+  border-bottom: 1px solid #17171e;
+}
+
+/* ===============
+    background glow
+=================*/
+.about__hero::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: 10%;
+  right: -150px;
+  background: #9b5cff;
+  opacity: 0.08;
+  filter: blur(130px);
+  pointer-events: none;
+}
+.about__hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===============
+    hero title
+=================*/
+.about__hero h1 {
+  max-width: 850px;
+  margin: 20px 0 30px;
+  font-size: clamp(50px, 8vw, 90px);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.about__hero h1 span {
+  color: #9b5cff;
+}
+
+/* ===============
+    hero description
+=================*/
+.about__hero__description {
+  max-width: 650px;
+  color: #858590;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ===============
+    about me
+=================*/
+.about__me {
+  padding: 130px 0;
+}
+
+.about__me__content {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+/* ===============
+    img
+=================*/
+.about__me__img {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #25252d;
+  border-radius: 18px;
+  background: #101016;
+  transition: all 0.5s ease;
+}
+.about__me__img::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #9b5cff;
+  opacity: 0;
+  filter: blur(90px);
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.about__me__img img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+/* ===============
+    image hover
+=================*/
+.about__me__img:hover {
+  transform: translateY(-8px);
+  border-color: #9b5cff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.about__me__img:hover::before {
+  opacity: 0.18;
+}
+
+.about__me__img:hover img {
+  transform: scale(1.04);
+}
+
+/* ===============
+    about text
+=================*/
+.about__me__text h2 {
+  margin: 15px 0 30px;
+  font-size: clamp(35px, 5vw, 55px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.about__me__text h2 span {
+  color: #9b5cff;
+}
+
+.about__me__text p:not(.section__lable) {
+  max-width: 650px;
+  margin-bottom: 18px;
+  color: #858590;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ===============
+    journey
+=================*/
+.journey {
+  position: relative;
+  padding: 130px 0;
+  overflow: hidden;
+  border-top: 1px solid #17171e;
+}
+
+/* ===============
+    backgroun glow
+=================*/
+.journey::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: -180px;
+  top: 35%;
+  background: #9b5cff;
+  opacity: 0.05;
+  filter: blur(120px);
+  pointer-events: none;
+}
+/* ===============
+    journey timeline
+=================*/
+.journey__timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 70px auto 0;
+}
+
+/* ===============
+    timeline line
+=================*/
+.journey__timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #292933;
+  transform: translateX(-50%);
+}
+
+/* ===============
+    journey item
+=================*/
+.journey__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  margin-bottom: 70px;
+}
+.journey__item:last-child {
+  margin-bottom: 0;
+}
+
+/* ===============
+    numbers
+=================*/
+.journey__number {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border: 1px solid #9b5cff;
+  border-radius: 10px;
+  font-size: 12px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* ===============
+    alternate items
+=================*/
+.journey__item:nth-child(odd) .journey__content {
+  grid-column: 1;
+  padding-right: 50px;
+  text-align: right;
+}
+
+.journey__item:nth-child(even) .journey__content {
+  grid-column: 2;
+  padding-left: 50px;
+}
+
+/* ===============
+    journey content
+=================*/
+.journey__content {
+  padding: 28px;
+  border: 1px solid #22222b;
+  border-radius: 14px;
+  background: #101016;
+  transition: all 0.4s ease;
+}
+/* ===============
+    journey__date
+=================*/
+.journey__date {
+  color: #9b5cff;
+  font-size: 11px;
+  letter-spacing: 1;
+}
+
+/* ===============
+    journey__heading
+=================*/
+.journey__content h3 {
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+/* ===============
+    journey text
+=================*/
+.journey__content p {
+  color: #777782;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ===============
+    timeline hover
+=================*/
+.journey__item:hover .journey__content {
+  transform: translateY(-6px);
+  border-color: #9b5cff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.journey__item:hover .journey__number {
+  background: #9b5cff;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(155, 92, 255, 0.4);
+}
+
+/* ===============
+    about cta
+=================*/
+.about__cta {
+  position: relative;
+  padding: 140px 0;
+  overflow: hidden;
+  border-top: 1px solid #17171e;
+}
+
+/* ===============
+    cta glow
+=================*/
+.about__cta::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #9b5cff;
+  opacity: 0.08;
+  filter: blur(140px);
+  pointer-events: none;
+}
+/* ===============
+    cta content
+=================*/
+.about__cta__content {
+  position: relative;
+  align-items: center;
+  padding: 90px 30px;
+  border: 1px solid #17171e;
+  border-radius: 18px;
+  z-index: 1;
+  text-align: center;
+  transition: 1s;
+}
+
+.about__cta__content:hover {
+  border: 1px solid #9b5cff;
+}
+
+.about__cta h2 {
+  max-width: 750px;
+  margin: 20px auto 35px;
+  font-size: clamp(40px, 6vw, 65px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+}
+
+.about__cta h2 span {
+  color: #9b5cff;
+}
+
+/* ===============
+    Footer
+=================*/
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid #17171e;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__and__TexoR {
+  display: flex;
+  align-items: center;
+}
+
+.logo__and__TexoR img {
+  width: 130px;
+  height: 130px;
+}
+
+.footer .copy__right {
+  color: #666671;
+  font-size: 12px;
+  padding: 0 50px;
+}
+
+/* ===============
+    Footer links
+=================*/
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 120px;
+}
+
+.footer__links a {
+  color: #777782;
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
+
+.footer__links a:hover {
+  color: #9b5cff;
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* =====================================================
+   HAMBURGER MENU
+===================================================== */
+
+.hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid #24242c;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  width: 19px;
+  height: 2px;
+  border-radius: 2px;
+  background: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Hover */
+
+.hamburger:hover {
+  border-color: #9b5cff;
+}
+
+/* =====================================================
+   ABOUT PAGE RESPONSIVE
+===================================================== */
+
+/* =========================
+   1100px
+========================= */
+
+@media (max-width: 1100px) {
+  /* ---------- Header ---------- */
+
+  .navbar {
+    width: 90%;
+  }
+
+  /* ---------- About Hero ---------- */
+
+  .about__hero {
+    padding: 140px 0 90px;
+  }
+
+  .about__hero h1 {
+    font-size: clamp(50px, 8vw, 80px);
+  }
+
+  /* ---------- About Me ---------- */
+
+  .about__me {
+    padding: 100px 0;
+  }
+
+  .about__me__content {
+    gap: 60px;
+  }
+
+  /* ---------- Journey ---------- */
+
+  .journey {
+    padding: 100px 0;
+  }
+
+  .journey__timeline {
+    max-width: 850px;
+  }
+
+  .journey__item {
+    gap: 50px;
+  }
+
+  .journey__item:nth-child(odd) .journey__content {
+    padding-right: 40px;
+  }
+
+  .journey__item:nth-child(even) .journey__content {
+    padding-left: 40px;
+  }
+
+  /* ---------- CTA ---------- */
+
+  .about__cta {
+    padding: 110px 0;
+  }
+
+  .about__cta__content {
+    padding: 80px 25px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer__links {
+    padding: 0 60px;
+  }
+
+  .footer .copy__right {
+    padding: 0 30px;
+  }
+}
+
+/* =========================
+   900px
+========================= */
+
+@media (max-width: 900px) {
+  /* ---------- Header ---------- */
+
+  .header {
+    padding: 18px 0;
+  }
+
+  .navbar {
+    width: 90%;
+  }
+
+  .navbar .logo__and__TexoR img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .nav__menu {
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    width: 90%;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 15px;
+
+    background: rgba(8, 8, 8, 0.96);
+    border: 1px solid #24242c;
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  }
+
+  .nav__menu.active {
+    display: flex;
+  }
+
+  .nav__menu .nav__link {
+    width: 100%;
+    padding: 14px 10px;
+  }
+
+  .nav__menu .nav__link::after {
+    display: none;
+  }
+
+  .nav__menu .nav__button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* ---------- About Hero ---------- */
+
+  .about__hero {
+    min-height: auto;
+    margin-top: 0;
+    padding: 140px 0 90px;
+  }
+
+  .about__hero h1 {
+    max-width: 700px;
+    font-size: clamp(48px, 8vw, 72px);
+    letter-spacing: -3px;
+  }
+
+  .about__hero__description {
+    max-width: 600px;
+    font-size: 14px;
+  }
+
+  /* ---------- About Me ---------- */
+
+  .about__me {
+    padding: 90px 0;
+  }
+
+  .about__me__content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about__me__img {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .about__me__text {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .about__me__text h2 {
+    font-size: clamp(35px, 6vw, 52px);
+  }
+
+  /* ---------- Journey ---------- */
+
+  .journey {
+    padding: 90px 0;
+  }
+
+  .journey__timeline {
+    max-width: 750px;
+    margin-top: 60px;
+  }
+
+  .journey__item {
+    gap: 40px;
+  }
+
+  .journey__content {
+    padding: 25px;
+  }
+
+  .journey__item:nth-child(odd) .journey__content {
+    padding-right: 35px;
+  }
+
+  .journey__item:nth-child(even) .journey__content {
+    padding-left: 35px;
+  }
+
+  /* ---------- CTA ---------- */
+
+  .about__cta {
+    padding: 90px 0;
+  }
+
+  .about__cta__content {
+    padding: 70px 25px;
+  }
+
+  .about__cta h2 {
+    font-size: clamp(40px, 7vw, 58px);
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer {
+    padding: 25px 0;
+  }
+
+  .footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__content > .logo__and__TexoR {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__content .logo__and__TexoR img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .footer .copy__right {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .footer__links {
+    padding: 0;
+    gap: 25px;
+  }
+}
+
+/* =========================
+   650px
+========================= */
+
+@media (max-width: 650px) {
+  /* ---------- Header ---------- */
+
+  .header {
+    padding: 15px 0;
+  }
+
+  .navbar {
+    width: 90%;
+  }
+
+  .navbar .logo__and__TexoR img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ---------- About Hero ---------- */
+
+  .about__hero {
+    padding: 120px 0 70px;
+  }
+
+  .about__hero h1 {
+    margin: 15px 0 25px;
+    font-size: clamp(42px, 12vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+  }
+
+  .about__hero__description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about__hero::before {
+    width: 300px;
+    height: 300px;
+    right: -150px;
+    filter: blur(100px);
+  }
+
+  /* ---------- About Me ---------- */
+
+  .about__me {
+    padding: 70px 0;
+  }
+
+  .about__me__content {
+    gap: 40px;
+  }
+
+  .about__me__img {
+    border-radius: 14px;
+  }
+
+  .about__me__text h2 {
+    margin: 15px 0 25px;
+    font-size: clamp(32px, 9vw, 48px);
+    letter-spacing: -1.5px;
+  }
+
+  .about__me__text p:not(.section__lable) {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  /* ---------- Journey ---------- */
+
+  .journey {
+    padding: 70px 0;
+  }
+
+  .journey__timeline {
+    margin-top: 50px;
+  }
+
+  /* Move timeline to the left */
+
+  .journey__timeline::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .journey__item {
+    display: block;
+    margin-bottom: 35px;
+    padding-left: 55px;
+  }
+
+  .journey__number {
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: none;
+    border-radius: 9px;
+  }
+
+  .journey__content {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .journey__item:nth-child(odd) .journey__content,
+  .journey__item:nth-child(even) .journey__content {
+    grid-column: auto;
+    padding: 22px;
+    text-align: left;
+  }
+
+  .journey__content h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .journey__content p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .journey__date {
+    font-size: 10px;
+  }
+
+  /* ---------- CTA ---------- */
+
+  .about__cta {
+    padding: 70px 0;
+  }
+
+  .about__cta__content {
+    padding: 60px 20px;
+    border-radius: 15px;
+  }
+
+  .about__cta h2 {
+    margin: 18px auto 30px;
+    font-size: clamp(34px, 9vw, 48px);
+    letter-spacing: -1.5px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer {
+    padding: 25px 0;
+  }
+
+  .footer__content > .logo__and__TexoR {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .footer__content .logo__and__TexoR img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .footer .copy__right {
+    padding: 0;
+    font-size: 11px;
+  }
+
+  .footer__links {
+    gap: 22px;
+  }
+
+  .footer__links a {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   380px
+========================= */
+
+@media (max-width: 380px) {
+  .navbar {
+    width: 92%;
+  }
+
+  /* ---------- About Hero ---------- */
+
+  .about__hero {
+    padding: 110px 0 60px;
+  }
+
+  .about__hero h1 {
+    font-size: 42px;
+  }
+
+  .about__hero__description {
+    font-size: 12px;
+  }
+
+  /* ---------- About Me ---------- */
+
+  .about__me {
+    padding: 60px 0;
+  }
+
+  .about__me__content {
+    gap: 30px;
+  }
+
+  .about__me__text h2 {
+    font-size: 32px;
+  }
+
+  /* ---------- Journey ---------- */
+
+  .journey {
+    padding: 60px 0;
+  }
+
+  .journey__timeline {
+    margin-top: 40px;
+  }
+
+  .journey__item {
+    padding-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .journey__number {
+    width: 38px;
+    height: 38px;
+    font-size: 11px;
+  }
+
+  .journey__content {
+    padding: 20px;
+  }
+
+  .journey__item:nth-child(odd) .journey__content,
+  .journey__item:nth-child(even) .journey__content {
+    padding: 20px;
+  }
+
+  .journey__content h3 {
+    font-size: 17px;
+  }
+
+  .journey__content p {
+    font-size: 11px;
+  }
+
+  /* ---------- CTA ---------- */
+
+  .about__cta {
+    padding: 60px 0;
+  }
+
+  .about__cta__content {
+    padding: 50px 15px;
+  }
+
+  .about__cta h2 {
+    font-size: 32px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer__links {
+    gap: 18px;
+  }
+}
+
+/* =====================================================
+   GLOBAL MOBILE OVERFLOW FIX
+===================================================== */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,129 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  background: #08080c;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: min(90%, 1150px);
+  margin-inline: auto;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #9b5cff;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 22px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Primary Button */
+
+.primary {
+  background: #9b5cff;
+  color: #ffffff;
+}
+
+.primary:hover {
+  background: #b47cff;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px rgba(155, 92, 255, 0.25);
+}
+
+/* Secondary Button */
+
+.secondary {
+  color: #858591;
+
+  border: 1px solid #24242c;
+}
+
+.secondary:hover {
+  color: #ffffff;
+
+  border-color: #9b5cff;
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.section-label {
+  margin-bottom: 14px;
+
+  color: #9b5cff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
