@@ -1042,10 +1042,16 @@
     gap: 35px;
   }
 
-  .about__preview__image {
+  .about__preview__img {
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 
-    max-width: 100%;
+  .about__preview__img img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .about__preview__text h2 {
